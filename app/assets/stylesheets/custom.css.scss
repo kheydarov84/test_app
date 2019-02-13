@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    background-image: url('img.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+}
+
+.red {
+    
+    color: red;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.header {
+    text-align: center;
+}

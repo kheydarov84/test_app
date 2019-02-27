@@ -1,0 +1,13 @@
+<h1 align="center">Users</h1>
+
+<% @users.each do |user| %>
+  <div align="center">
+        <div class="row">
+            <div class="well col-md-4 col-md-offset-4">
+                <%= gravatar_for user %><br><br>
+                <p><%= link_to user.username, user_path(user), class: "article-title" %></p>
+                <p><%= user.email %></p>
+            </div>
+        </div>
+  </div>
+<% end %>

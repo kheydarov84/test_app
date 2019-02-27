@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :articles
   root :to => 'welcome#home'
+  resources :users, except: :new
   
-  resources :users do
-    resources :articles
-  end
+  get 'signup', to: 'users#new'
   
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  
+  resources :categories, except: [:destroy]
 end
